@@ -1,0 +1,80 @@
+        <h1> YOUTUBE </h1> 
+
+
+
+button
+
+<button onclick="showOutput()"> hi </button>
+
+<p id="resultText"></p>
+
+<script>
+  function showOutput() {
+    document.getElementById('resultText').innerHTML = "hi";
+  }
+</script>
+
+to see info
+
+<details>
+  <summary>learn more information</summary>
+  <br>
+  <p> (more informatio) </p>
+</details>
+ 
+
+
+seacrch space
+
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>"search"</title>
+    <style>
+        .search-box { margin: 25px auto; text-align: center; }
+        input[type="text"] { padding: 10px; width: 250px; font-size: 20px; }
+        button { padding: 10px 10px; font-size: 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="search-box">
+    <!-- Форма отправляет запрос на официальный поиск GitHub -->
+    <form id="githubSearchForm" action="https://github.com" method="get" target="_blank">
+        <!-- Скрытый параметр, указывающий, что мы ищем именно код (или registry, repositories и т.д.) -->
+        <input type="hidden" name="type" value="code">
+        
+        <!-- Поле ввода для пользователя -->
+        <input type="text" id="searchInput" placeholder=... required>
+        
+        <!-- Настоящее имя параметра 'q', которое уйдет в URL, сформируется через JavaScript -->
+        <input type="hidden" name="q" id="finalQuery">
+        
+        <button type="submit"> search </button>
+    </form>
+</div>
+
+<script>
+document.getElementById('githubSearchForm').addEventListener('submit', function(e) {
+    const rawInput = document.getElementById('searchInput').value.trim();
+    
+    // Если в запросе есть пробелы, оборачиваем его в кавычки для точного поиска на GitHub
+    if (rawInput.includes(' ')) {
+        document.getElementById('finalQuery').value = `"${rawInput}"`;
+    } else {
+        document.getElementById('finalQuery').value = rawInput;
+    }
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+design:
+
