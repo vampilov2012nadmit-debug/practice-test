@@ -40,7 +40,7 @@ seacrch space
 
 <div class="search-box">
     <!-- Форма отправляет запрос на официальный поиск GitHub -->
-    <form id="githubSearchForm" action="https://github.com" method="get" target="_blank">
+    <form id="youtube_seacrch" action="https://www.youtube.com/" method="get" target="_blank">
         <!-- Скрытый параметр, указывающий, что мы ищем именно код (или registry, repositories и т.д.) -->
         <input type="hidden" name="type" value="code">
         
@@ -76,5 +76,51 @@ document.getElementById('githubSearchForm').addEventListener('submit', function(
 
 
 
-design:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое Портфолио</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f9; color: #0a0a0a; text-align: center; }
+        header { background: #346392; color: rgb(242, 237, 237); padding: 120px 60px; }
+        header h1 { margin: 0; font-size: 2.5em; }
+        header p { font-size: 1.2em; color: #bbc0c4; }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .section { background: rgb(254, 254, 254); padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h2 { color: #0366d6; }
+        .links a { display: inline-block; margin: 10px; padding: 10px 20px; background: #0366d6; color: white; text-decoration: none; border-radius: 5px; transition: 0.2s; }
+        .links a:hover { background: #000000; }
+    </style>
+</head>
+<body>
 
+    <header>
+        <h1>Nadmit Vampilov</h1>
+        <p>Frontend Разработчик / Начинающий программист</p>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Обо мне</h2>
+            <p>Привет! Я изучаю веб-разработку и это мой первый сайт, запущенный на GitHub Pages. Интересуюсь HTML, CSS и JavaScript.</p>
+        </div>
+
+        <div class="section">
+            <h2>Мои навыки</h2>
+            <p>HTML5 • CSS3 • Git & GitHub • VS Code</p>
+        </div>
+
+        <div class="section">
+            <h2>Контакты и ссылки</h2>
+            <div class="links">
+                <a href="https://github.com" target="_blank">Мой GitHub</a>
+                <a href="#" target="_blank">Telegram</a>
+                <a href="#" target="_blank">Резюме</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
